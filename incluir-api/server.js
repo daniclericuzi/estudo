@@ -1,7 +1,7 @@
 /**
  * Module dependencies.
  */
- const app = require("./src/app");
+ const app = require("./src/app")
  const port = 8080;
  
  /**
