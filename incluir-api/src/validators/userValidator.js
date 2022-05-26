@@ -1,4 +1,4 @@
-onst yup = require('yup')
+const yup = require('yup')
 
 /**
  * Personalizando mensagens de erro para atributo User

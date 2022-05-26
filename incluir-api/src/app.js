@@ -32,8 +32,7 @@
  const users = require('./routes/userRoute');
  const estabelecimentos = require('./routes/estabelecimentoRoute');
  const avaliacoes = require('./routes/avaliacaoRoute');
- const sessions = require("./routes/sessionRoute");
- 
+
  
  app.use(express.json());
  
@@ -49,6 +48,5 @@
  app.use('/users', users);
  app.use('/estabelecimentos', estabelecimentos);
  app.use('/avaliacao', avaliacoes);
- app.use('/sessions', sessions);
- 
+
  module.exports = app;

@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
-const authMiddleware = require('../middlewares/autenticacao');
 
 /**
 @route POST users/cadastro
@@ -10,9 +9,6 @@ const authMiddleware = require('../middlewares/autenticacao');
 @endpoint http://localhost:porta/users/cadastro
 **/
 router.post('/cadastro', userController.cadastrarUser);
-
-
-router.use(authMiddleware);
 
 /**
 @route DELETE users

@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const avaliacaoController = require('../controllers/avaliacaoController');
-const authMiddleware = require('../middlewares/autenticacao');
 
 /**
 @route GET avaliacao/estabelecimento
@@ -10,8 +9,6 @@ const authMiddleware = require('../middlewares/autenticacao');
 @endpoint http://localhost:porta/avaliacao/
 **/
 router.get('/', avaliacaoController.obterAvaliacaoPorEstabelecimento);
-
-router.use(authMiddleware);
 
 /**
 @route POST avaliacao/cadastro
@@ -28,6 +25,5 @@ router.post('/cadastro', avaliacaoController.realizarCadastroAvaliacao);
 @endpoint http://localhost:porta/avaliacao/:id
 **/
 router.delete('/:id', avaliacaoController.deletarAvaliacao);
-
 
 module.exports = router;
