@@ -11,20 +11,21 @@
  /*
    * Conectar com o MongoDB
  */
- mongoose.connect(process.env.MONGODB_URI, {
-   useNewUrlParser: true,
-   useUnifiedTopology: true
- });
+ mongoose.connect('mongodb://172.18.0.2/incluir');
  
  let db = mongoose.connection;
  
  /*
    * Tratamento do retorno da conexão
  */
- db.on("error", console.log.bind(console, "connection error:"));
- db.once("open", function (){
-   console.log("conexão feita com sucesso.");
- })
+
+mongoose.connection.on('open', function () {
+  console.log('Connected to Database '+'test');
+});
+
+mongoose.connection.on('error', (err) => {
+  console.log('Database error '+err);
+});
  
  /**
   * Routes
