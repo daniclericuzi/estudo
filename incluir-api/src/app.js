@@ -11,7 +11,7 @@
  /*
    * Conectar com o MongoDB
  */
- mongoose.connect('mongodb://172.18.0.2:27017/incluir');
+ mongoose.connect('mongodb://172.0.0.1/incluir');
  
  let db = mongoose.connection;
  
